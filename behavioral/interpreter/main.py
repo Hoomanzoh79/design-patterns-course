@@ -5,7 +5,7 @@ from typing import Any
 class Expression(ABC):
 
     @abstractmethod
-    def interpret(self,value:Any):
+    def interpret(self,context:Any):
         raise NotImplementedError
 # endregion
 
