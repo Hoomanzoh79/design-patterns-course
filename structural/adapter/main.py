@@ -1,4 +1,3 @@
-from abc import ABC, abstractmethod
 """
 Adapter Pattern
 ===============
@@ -21,13 +20,12 @@ class EuropeanSocket:
         return 230.0
 
 
-class USASocket(ABC):
+class USASocket:
     """Target: the interface the client (USADevice) expects (120V)."""
 
-    @abstractmethod
     def provide_120v(self) -> float:
         """Delivers 120V as used in American outlets."""
-        raise NotImplementedError
+        return 120.0
 
 
 class EuropeanToUSAAdapter(USASocket):
